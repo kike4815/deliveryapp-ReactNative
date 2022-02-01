@@ -1,19 +1,21 @@
-import { StyleSheet, TextInput } from "react-native";
-import { Provider as PaperProvider } from "react-native-paper";
+import { StatusBar } from "expo-status-bar";
+import { Provider as PaperProvider, DefaultTheme } from "react-native-paper";
+import LoginScreen from "./screens/login/LoginScreen";
 
 export default function App() {
   return (
-    <PaperProvider style={styles.container}>
-      <TextInput label="example test">deliveryapp</TextInput>
+    <PaperProvider theme={theme}>
+      <StatusBar style="auto" translucent={false} />
+      <LoginScreen />
     </PaperProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: "rgb(101, 37, 131)",
+    background: "transparent",
   },
-});
+};
