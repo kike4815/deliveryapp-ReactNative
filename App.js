@@ -1,12 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import { Provider as PaperProvider, DefaultTheme } from "react-native-paper";
 import LoginScreen from "./screens/login/LoginScreen";
+import RegisterScreen from "./screens/register/RegisterScreen";
 
 export default function App() {
   return (
     <PaperProvider theme={theme}>
       <StatusBar style="auto" translucent={false} />
-      <LoginScreen />
+      {/* <LoginScreen /> */}
+      <RegisterScreen />
     </PaperProvider>
   );
 }
