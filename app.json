@@ -20,18 +20,15 @@
       "supportsTablet": true
     },
     "android": {
+
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF",
-        "translucent": false
+        "backgroundColor": "#FFFFFF"
       }
+      
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "androidStatusBar": {
-      "backgroundColor": "#C2185B",
-      "translucent": false
     }
   }
 }
