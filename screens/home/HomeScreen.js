@@ -6,7 +6,7 @@ import { FAB, Appbar, Menu } from "react-native-paper";
 import ConfirmDeliveryCard from "../../components/confirm-deliver-card/Confirm-delivery-card";
 import SearchingDelivery from "../../components/searching_delivery/Searching-delivery";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const state = 1;
 
   return (
@@ -80,7 +80,13 @@ const HomeScreen = () => {
           </>
         ) : null}
       </MapView>
-      {state === 1 ? <FAB style={homeStyle.fab} icon="plus" /> : null}
+      {state === 1 ? (
+        <FAB
+          style={homeStyle.fab}
+          icon="plus"
+          onPress={() => navigation.navigate("Login")}
+        />
+      ) : null}
       {state === 2 ? <ConfirmDeliveryCard /> : null}
       {state === 3 ? <SearchingDelivery /> : null}
     </SafeAreaView>

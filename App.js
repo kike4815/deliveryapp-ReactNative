@@ -1,12 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { Provider as PaperProvider, DefaultTheme } from "react-native-paper";
-import DeliveresScreen from "./screens/deliveries/DeliveresScreen";
+import AppNavigation from "./components/navigation/appNavigation";
 
 export default function App() {
   return (
     <PaperProvider theme={theme}>
       <StatusBar style="auto" translucent={false} />
-      <DeliveresScreen />
+      <AppNavigation />
     </PaperProvider>
   );
 }

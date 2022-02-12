@@ -3,12 +3,12 @@ import React from "react";
 import { TextInput, Button, Appbar } from "react-native-paper";
 import { registerStyles } from "./StyleRegister";
 
-export default function LoginScreen() {
+export default function RegisterScreen({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
         <Appbar>
-          <Appbar.BackAction />
+          <Appbar.BackAction onPress={() => navigation.navigate("Login")} />
           <Appbar.Content title="Register" />
         </Appbar>
         <View style={registerStyles.content}>

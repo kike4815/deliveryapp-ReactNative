@@ -3,7 +3,7 @@ import React from "react";
 import { Card, TextInput, Button } from "react-native-paper";
 import { loginStyles } from "./StyleLogin";
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   return (
     <SafeAreaView style={loginStyles.content}>
       <View style={loginStyles.view}>
@@ -21,8 +21,15 @@ export default function LoginScreen() {
               right={<TextInput.Icon name="eye" />}
             />
             <Button uppercase={false}>forgot email/password</Button>
-            <Button mode="contained">login</Button>
-            <Button>Register</Button>
+            <Button
+              mode="contained"
+              onPress={() => navigation.navigate("Home")}
+            >
+              login
+            </Button>
+            <Button onPress={() => navigation.navigate("Register")}>
+              Register
+            </Button>
           </Card.Content>
         </Card>
       </View>
